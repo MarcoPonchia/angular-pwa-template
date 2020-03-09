@@ -1,0 +1,16 @@
+<form  [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label>Email address</label>
+    <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label>Username</label>
+    <input formControlName="username" class="form-control" >
+  </div>
+  <ng-container *ngIf="(loginErrors$ | async) as errors">
+    <div *ngIf="!!errors['loginFailed']" class="d-flex form-text text-danger">
+      ERR: {{errors['loginFailed']}}
+    </div>
+  </ng-container>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
