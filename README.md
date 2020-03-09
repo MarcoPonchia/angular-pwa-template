@@ -25,3 +25,13 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Mock db
+
+To test app BE use [json-server](https://www.npmjs.com/package/json-server) command `json-server --watch db.json`
+
+
+## Test service worker
+
+To test service worker in local build project with `ng build --prod`
+Then launch in `dist/angular-pwa-template` mock server using [http-server](https://www.npmjs.com/package/http-server) command: `http-server -p 8081` -p $PORT
