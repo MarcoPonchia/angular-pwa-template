@@ -1,2 +1,2 @@
 # angular-pwa-template
-Test pwa web app in Angula 8
+Test pwa web app in Angular 8
