@@ -1,4 +1,8 @@
 <div class="d-inline-flex w-100 justify-content-start bg-dark py-2 px-5">
-    <a [routerLink]="['']" [routerLinkActive]="['btn-primary', 'text-white']" class="btn btn-outline-primary mr-2" >Home</a>
-    <a [routerLink]="['companies']" class="btn btn-outline-primary">Companies</a>
+    <a [routerLink]="['/user','login']" [routerLinkActive]="['btn-primary', 'text-white']" class="btn btn-outline-primary mr-2">
+        {{ logged ? 'Home' : 'LogIn'}}
+    </a>
+    <ng-container *ngIf="logged">
+        <a [routerLink]="['/topics','list']" class="btn btn-outline-primary">My Topics</a>
+    </ng-container>
 </div>

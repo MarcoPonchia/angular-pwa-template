@@ -1,1 +1,5 @@
-<p>user works!</p>
+<app-menu [logged]="!!(user$ |async)"></app-menu>  
+<div class="d-flex justify-content-center pt-5">
+  <router-outlet></router-outlet>
+</div>
+

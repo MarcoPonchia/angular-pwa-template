@@ -8,14 +8,13 @@ const routes: Routes = [
     loadChildren: () =>
       import("./companies/companies.module").then(m => m.CompaniesModule)
   },
-  { path: "user", loadChildren: () => UserModule },
   {
-    path: "entity_companies",
+    path: "topics",
     loadChildren: () =>
-      import("./entity-companies/entity-companies.module").then(
-        m => m.EntityCompaniesModule
-      )
-  }
+      import("./topics/topics.module").then(m => m.TopicsModule)
+  },
+  { path: "user", loadChildren: () => UserModule },
+  { path: "**", redirectTo: "user/login" }
 ];
 
 @NgModule({
