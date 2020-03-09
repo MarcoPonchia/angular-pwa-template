@@ -1,0 +1,119 @@
+{
+    "users": [
+        {
+            "id": "u1",
+            "userName": "merack",
+            "email": "mp@gmail.com",
+            "roles": ["admin"],
+            "companyId": "c1"
+        },
+        {
+            "id": "u2",
+            "userName": "bob",
+            "email": "bob@gmail.com",
+            "roles": ["user"],
+            "companyId": "c1"
+        },
+        {
+            "id": "u3",
+            "userName": "admin",
+            "email": "admin@gmail.com",
+            "roles": ["admin"],
+            "companyId": "c2"
+        },
+        {
+            "id": "u4",
+            "userName": "ted",
+            "email": "ted@gmail.com",
+            "roles": ["ted"],
+            "companyId": "c2"
+        }
+    ],
+    "companies": [
+        {
+            "id": "c1",
+            "name": "uqido",
+            "city": "padova"
+        },
+        {
+            "id": "c2",
+            "name": "fox-hound",
+            "city": "alaska"
+        }
+    ],
+    "topics": [
+        {
+            "id": "t1",
+            "title": "relax",
+            "companyId": "c2"
+        },
+        {
+            "id": "t2",
+            "name": "games",
+            "companyId": "c1"
+        },
+        {
+            "id": "t3",
+            "title": "movies",
+            "companyId": "c1"
+        }
+    ],
+    "posts": [
+        {
+            "id": "p1",
+            "topicId": "t1",
+            "authorId": "u3",
+            "subtitle": "disneyland",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vehicula purus erat, sed viverra lectus molestie et. Duis diam ante, aliquet non hendrerit ut, sollicitudin vitae nisl. Mauris lacinia, eros porttitor suscipit mollis, leo turpis consectetur ex, sit amet tristique risus est id ex. Duis et efficitur tortor. Cras et metus enim. Donec viverra urna nec semper pellentesque. Fusce eros nisl, scelerisque eu leo et, rutrum rutrum tellus. Aliquam id justo enim."
+        },
+        {
+            "id": "p2",
+            "topicId": "t1",
+            "authorId": "u4",
+            "subtitle": "park",
+            "description": "Integer vehicula rutrum vestibulum. Nullam lacinia justo ac facilisis suscipit. Cras in sem libero. Praesent consequat faucibus elementum. Maecenas quis quam placerat, laoreet mi vitae, tincidunt felis. Donec auctor urna non posuere tincidunt. Aenean nisl lectus, aliquet et pretium vel, auctor eget nibh. Fusce tristique odio vitae odio semper, id tincidunt sapien cursus."
+        },
+        {
+            "id": "p3",
+            "topicId": "t2",
+            "authorId": "u1",
+            "subtitle": "super smash brothers",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vehicula purus erat, sed viverra lectus molestie et. Duis diam ante, aliquet non hendrerit ut, sollicitudin vitae nisl. Mauris lacinia, eros porttitor suscipit mollis, leo turpis consectetur ex, sit amet tristique risus est id ex. Duis et efficitur tortor. Cras et metus enim. Donec viverra urna nec semper pellentesque. Fusce eros nisl, scelerisque eu leo et, rutrum rutrum tellus. Aliquam id justo enim."
+        },
+        {
+            "id": "p4",
+            "topicId": "t2",
+            "authorId": "u2",
+            "subtitle": "metal gear solid",
+            "description": "Integer vehicula rutrum vestibulum. Nullam lacinia justo ac facilisis suscipit. Cras in sem libero. Praesent consequat faucibus elementum. Maecenas quis quam placerat, laoreet mi vitae, tincidunt felis. Donec auctor urna non posuere tincidunt. Aenean nisl lectus, aliquet et pretium vel, auctor eget nibh. Fusce tristique odio vitae odio semper, id tincidunt sapien cursus."
+        },
+        {
+            "id": "p5",
+            "topicId": "t2",
+            "authorId": "u2",
+            "subtitle": "shining",
+            "description": "Ut consequat volutpat neque vulputate maximus. Aenean laoreet velit nec ipsum suscipit sodales. Ut sollicitudin sit amet purus eget tincidunt. Duis non ligula risus. Praesent sit amet tellus quis sapien egestas porttitor. Vestibulum venenatis nec magna sed gravida. Sed gravida interdum turpis."
+        },
+        {
+            "id": "p6",
+            "topicId": "t3",
+            "authorId": "u1",
+            "subtitle": "the road",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vehicula purus erat, sed viverra lectus molestie et. Duis diam ante, aliquet non hendrerit ut, sollicitudin vitae nisl. Mauris lacinia, eros porttitor suscipit mollis, leo turpis consectetur ex, sit amet tristique risus est id ex. Duis et efficitur tortor. Cras et metus enim. Donec viverra urna nec semper pellentesque. Fusce eros nisl, scelerisque eu leo et, rutrum rutrum tellus. Aliquam id justo enim."
+        },
+        {
+            "id": "p7",
+            "topicId": "t3",
+            "authorId": "u2",
+            "subtitle": "django",
+            "description": "Integer vehicula rutrum vestibulum. Nullam lacinia justo ac facilisis suscipit. Cras in sem libero. Praesent consequat faucibus elementum. Maecenas quis quam placerat, laoreet mi vitae, tincidunt felis. Donec auctor urna non posuere tincidunt. Aenean nisl lectus, aliquet et pretium vel, auctor eget nibh. Fusce tristique odio vitae odio semper, id tincidunt sapien cursus."
+        },
+        {
+            "id": "p8",
+            "topicId": "t3",
+            "authorId": "u1",
+            "subtitle": "the ring",
+            "description": "Ut consequat volutpat neque vulputate maximus. Aenean laoreet velit nec ipsum suscipit sodales. Ut sollicitudin sit amet purus eget tincidunt. Duis non ligula risus. Praesent sit amet tellus quis sapien egestas porttitor. Vestibulum venenatis nec magna sed gravida. Sed gravida interdum turpis."
+        }
+    ]
+}
