@@ -28,8 +28,8 @@ export class TopicsEffects {
   @Effect()
   fetchTopics = this.actions$.pipe(
     ofType(TopicsActions.fetchTopics),
-    switchMap(action => this.store.select(UserSelectors.companyId)),
-    switchMap((companyId: string) => {
+    withLatestFrom(this.store.select(UserSelectors.companyId)),
+    switchMap(([action, companyId]) => {
       console.log("companyId", companyId);
       let params = new HttpParams();
       params = params.append("companyId", companyId);
