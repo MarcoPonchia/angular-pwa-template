@@ -30,6 +30,14 @@ export const errors = createSelector(
 );
 
 /**
+ * @return user companyId of current user contained in the store
+ */
+export const companyId = createSelector(
+  userModel,
+  (state: User): string => state && state.companyId
+);
+
+/**
  * @return true if warehouses are alined with BE
  */
 export const isAligned = createSelector(

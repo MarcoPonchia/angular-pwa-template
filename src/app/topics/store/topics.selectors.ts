@@ -10,7 +10,7 @@ const root = (state: any): any => state;
  */
 export const topicsState = createSelector(
   root,
-  (state: any): State => state.user
+  (state: any): State => state.topics
 );
 
 /**

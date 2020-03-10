@@ -1,1 +1,20 @@
-<p>topic-list works!</p>
+<div class="w-100">
+  <h2>Topic list</h2>
+  <div *ngIf="(aligned$ | async)" class="row justify-content-between">
+    <div class="col-6 w-100">
+      <ng-container *ngFor="let topic of (topics$ | async)">
+        <div class="d-flex flex-column topic-box w-100 p-2" [ngClass]="{'selected': topic.id === selectedTopic?.id}" (click)="selectTopic(topic)">
+          <b class="w-100">{{topic.title}}</b>
+          <small class="text-gray">
+            {{topic.postsSummary}}
+          </small>
+        </div>
+      </ng-container>
+    </div>
+    <div class="col-6">
+      <ng-container *ngIf="selectedTopic">
+        <app-topic-detail [topic]="selectedTopic"></app-topic-detail>
+      </ng-container>
+    </div>
+  </div>
+</div>

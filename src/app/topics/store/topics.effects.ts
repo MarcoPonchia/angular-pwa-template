@@ -1,13 +1,20 @@
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpParams } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Actions, Effect, ofType } from "@ngrx/effects";
-import { catchError, map, mergeMap, switchMap } from "rxjs/operators";
+import {
+  catchError,
+  map,
+  mergeMap,
+  switchMap,
+  withLatestFrom
+} from "rxjs/operators";
 import { environment } from "src/environments/environment";
 import * as TopicsActions from "./topics.actions";
 import { Store } from "@ngrx/store";
 import { ActivatedRoute, Router } from "@angular/router";
 import { Topic } from "src/app/shared/models/topic.model";
 import { of } from "rxjs";
+import * as UserSelectors from "../../user/store/user.selectors";
 
 @Injectable()
 export class TopicsEffects {
@@ -21,8 +28,12 @@ export class TopicsEffects {
   @Effect()
   fetchTopics = this.actions$.pipe(
     ofType(TopicsActions.fetchTopics),
-    switchMap(action => {
-      return this.httpClient.get(`${environment.apiPath}/topics`);
+    switchMap(action => this.store.select(UserSelectors.companyId)),
+    switchMap((companyId: string) => {
+      console.log("companyId", companyId);
+      let params = new HttpParams();
+      params = params.append("companyId", companyId);
+      return this.httpClient.get(`${environment.apiPath}/topics`, { params });
     }),
     map((response: any) => {
       return TopicsActions.setTopics({

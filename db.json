@@ -69,7 +69,7 @@
         },
         {
             "id": "t2",
-            "name": "games",
+            "title": "games",
             "companyId": "c1",
             "posts": [
                 {

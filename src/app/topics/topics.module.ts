@@ -8,14 +8,14 @@ import { SharedModule } from "../shared/shared.module";
 import { StoreModule } from "@ngrx/store";
 import { EffectsModule } from "@ngrx/effects";
 import { TopicsEffects } from "./store/topics.effects";
-import { TopicListComponent } from './topic-list/topic-list.component';
+import { TopicListComponent } from "./topic-list/topic-list.component";
+import { TopicDetailComponent } from "./topic-detail/topic-detail.component";
 
 @NgModule({
-  declarations: [TopicsComponent, TopicListComponent],
+  declarations: [TopicsComponent, TopicListComponent, TopicDetailComponent],
   imports: [
     CommonModule,
     SharedModule,
-
     StoreModule.forFeature("topics", topicsReducer),
     EffectsModule.forFeature([TopicsEffects]),
     TopicsRoutingModule

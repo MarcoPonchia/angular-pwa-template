@@ -12,4 +12,8 @@ export class Topic extends ActiveModel {
       this.posts = object.posts && object.posts.map(p => new Post(p));
     }
   }
+
+  get postsSummary(): string {
+    return this.posts.map(p => p.subtitle).join(", ");
+  }
 }

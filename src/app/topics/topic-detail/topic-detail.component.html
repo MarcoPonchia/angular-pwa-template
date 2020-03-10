@@ -1,0 +1,7 @@
+<h4>{{topic.title}}</h4>
+<ng-container *ngFor="let post of topic.posts">
+  <div class="d-flex flex-column">
+    <b>{{post.subtitle}}:</b>
+    <span>{{post.description}}</span>
+  </div>
+</ng-container>

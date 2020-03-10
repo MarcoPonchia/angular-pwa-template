@@ -23,7 +23,7 @@ export const topicsReducer = createReducer(
   on(TopicsActions.setTopics, (state, { topics }) => {
     return {
       ...state,
-      topics: topics,
+      list: topics,
       aligned: true
     };
   }),
