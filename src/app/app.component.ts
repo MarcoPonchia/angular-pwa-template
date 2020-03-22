@@ -1,4 +1,6 @@
-import { Component } from "@angular/core";
+import { Observable } from "rxjs";
+import { Component, OnInit } from "@angular/core";
+import { MessagingService } from "./shared/messaging.service";
 
 @Component({
   selector: "app-root",
@@ -7,4 +9,7 @@ import { Component } from "@angular/core";
 })
 export class AppComponent {
   title = "angular-pwa-template";
+  message;
+
+  constructor() {}
 }

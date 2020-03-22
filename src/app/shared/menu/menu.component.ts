@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from "@angular/core";
+import { MessagingService } from "../messaging.service";
 
 @Component({
   selector: "app-menu",
@@ -9,7 +10,13 @@ export class MenuComponent implements OnInit {
   @Input()
   logged: boolean = true;
 
-  constructor() {}
+  message;
 
-  ngOnInit() {}
+  constructor(private firebaseService: MessagingService) {}
+
+  ngOnInit() {
+    this.firebaseService.requestPermission();
+    this.firebaseService.receiveMessage();
+    this.message = this.firebaseService.currentMessage;
+  }
 }
