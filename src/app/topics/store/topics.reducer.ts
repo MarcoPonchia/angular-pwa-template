@@ -1,6 +1,6 @@
 import * as TopicsActions from "./topics.actions";
 import { Action, createReducer, on } from "@ngrx/store";
-import { Topic } from "src/app/shared/models/topic.model";
+import { Topic } from "../../shared/models/topic.model";
 
 export interface State {
   list: Topic[];
@@ -12,7 +12,7 @@ const initialState: State = {
   aligned: true
 };
 
-export const topicsReducer = createReducer(
+const reducer = createReducer(
   initialState,
   on(TopicsActions.fetchTopics, state => {
     return {
@@ -69,3 +69,7 @@ export const topicsReducer = createReducer(
     };
   })
 );
+
+export function topicsReducer(state: State | undefined, action: Action) {
+  return reducer(state, action);
+}

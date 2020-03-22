@@ -13,6 +13,8 @@ import { reducers } from "./reducers";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 import { EffectsModule } from "@ngrx/effects";
 import { HttpClientModule } from "@angular/common/http";
+import { AngularFireMessagingModule } from "@angular/fire/messaging";
+import { AngularFireModule } from "@angular/fire";
 
 @NgModule({
   declarations: [AppComponent],
@@ -24,6 +26,8 @@ import { HttpClientModule } from "@angular/common/http";
     EffectsModule.forRoot([]),
     UserModule,
     BrowserModule,
+    AngularFireMessagingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     AppRoutingModule,
     ServiceWorkerModule.register("ngsw-worker.js", {
       enabled: environment.production

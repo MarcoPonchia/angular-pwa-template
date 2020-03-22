@@ -1,6 +1,6 @@
 import * as UserActions from "./user.actions";
 import { Action, createReducer, on } from "@ngrx/store";
-import { User } from "src/app/shared/models/user.model";
+import { User } from "../../shared/models/user.model";
 
 export interface State {
   model: User;
@@ -14,7 +14,7 @@ const initialState: State = {
   aligned: true
 };
 
-export const userReducer = createReducer(
+const reducer = createReducer(
   initialState,
   on(UserActions.logout, state => {
     return {
@@ -60,6 +60,6 @@ export const userReducer = createReducer(
   })
 );
 
-// export function reducer(state: State | undefined, action: Action) {
-//   return userReducer(state, action);
-// }
+export function userReducer(state: State | undefined, action: Action) {
+  return reducer(state, action);
+}

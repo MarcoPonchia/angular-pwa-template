@@ -9,7 +9,7 @@ import { LoginComponent } from "./login/login.component";
 import { userReducer } from "./store/user.reducer";
 import { EffectsModule } from "@ngrx/effects";
 import { UserEffects } from "./store/user.effects";
-import { ShowUserComponent } from './show-user/show-user.component';
+import { ShowUserComponent } from "./show-user/show-user.component";
 
 @NgModule({
   declarations: [UserComponent, LoginComponent, ShowUserComponent],
