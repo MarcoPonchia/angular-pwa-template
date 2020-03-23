@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve --host 0.0.0.0` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
@@ -28,7 +28,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Mock db
 
-To test app BE use [json-server](https://www.npmjs.com/package/json-server) command `json-server --watch db.json`
+To test app BE use [json-server](https://www.npmjs.com/package/json-server) command `json-server --host 0.0.0.0 -w db.json`
 
 
 ## Test service worker
