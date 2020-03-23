@@ -11,21 +11,27 @@
         },
         {
             "id": "u2",
-            "username": "bob",
-            "firstName": "bob",
+            "username": "c",
+            "firstName": "c",
             "lastName": "user",
-            "email": "bob@gmail.com",
-            "roles": ["user"],
-            "companyId": "c1"
+            "email": "c@gmail.com",
+            "roles": ["admin"],
+            "companyId": "c1",
+            "deviceInfo": {
+                "token": "ci5p-u3u07DbrBLRkW53jL:APA91bFiHlVxJnNGYxDO3ThUR2uCcpnBS66kunTKKlFcLA4kq56WyqZORDpv923AlwwR4WzzOOAl1xh-F3qR2XO6WhRiq819UCkyUiiG32fZHilJ8KxrZlpN9rYNPV7lRS4qhdqyGMMY"
+            }
         },
         {
             "id": "u3",
-            "username": "admin",
-            "firstName": "admin",
+            "username": "f",
+            "firstName": "f",
             "lastName": "user",
-            "email": "admin@gmail.com",
+            "email": "f@gmail.com",
             "roles": ["admin"],
-            "companyId": "c2"
+            "companyId": "c2",
+            "deviceInfo": {
+                "token": "cmVPIN6EKMboZ4RRrGnNCb:APA91bGBiIRH1IR6axWgADTKnWO5rUQIMgTNV9p7vOcls9vXW7SdvwAQ7QzDhFkkUYIZ2sXoaPKNiUEiDlAOol9_oZkSA5HN78fc-PgjzsZ_JGkyLFVbHR03SIlmT7Y8rq-bAvrlvPQv"
+            }
         },
         {
             "id": "u4",

@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, HostListener } from "@angular/core";
 import * as Actions from "./store/topics.actions";
 import * as UserSelectors from "../user/store/user.selectors";
 import { Store } from "@ngrx/store";
@@ -11,6 +11,11 @@ import { Router } from "@angular/router";
   styleUrls: ["./topics.component.scss"]
 })
 export class TopicsComponent implements OnInit {
+  @HostListener("window:focus", ["$event"])
+  onFocus(event: any): void {
+    this.store.dispatch(Actions.fakeFetchTopic());
+  }
+
   constructor(private store: Store<any>, private router: Router) {}
 
   ngOnInit() {

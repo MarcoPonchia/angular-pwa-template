@@ -17,6 +17,6 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
     this.firebaseService.requestPermission();
     this.firebaseService.receiveMessage();
-    this.message = this.firebaseService.currentMessage;
+    // this.message = this.firebaseService.currentMessage;
   }
 }

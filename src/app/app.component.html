@@ -1,3 +1,13 @@
 <div class="d-flex flex-column w-100">
   <router-outlet></router-outlet>
 </div>
+<div class="row justify-content-center pt-5">
+  <button class="btn btn-outline-primary" (click)="showDeviceInfo = !showDeviceInfo">Toggle Device</button>
+</div>
+<ng-container *ngIf="showDeviceInfo">
+  <div class="row justify-content-center">
+    <div class="p-3">
+      <b>Device info: </b>{{message | json}}
+    </div>
+  </div>
+</ng-container>

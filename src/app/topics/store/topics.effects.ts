@@ -105,4 +105,39 @@ export class TopicsEffects {
       return caught;
     })
   );
+
+  // TODO: Only mock
+  @Effect()
+  fakeFetchTopics = this.actions$.pipe(
+    ofType(TopicsActions.fakeFetchTopic),
+    withLatestFrom(this.store.select(UserSelectors.companyId)),
+    switchMap(([action, companyId]) => {
+      console.log("companyId", companyId);
+      let params = new HttpParams();
+      params = params.append("companyId", companyId);
+      return this.httpClient.get(`${environment.apiPath}/topics`, { params });
+    }),
+    map((response: any) => {
+      console.log("fake fetch topics");
+      const newTopic = new Topic({
+        id: "t55",
+        title: "something",
+        companyId: "c1",
+        posts: [
+          {
+            authorId: "u1",
+            subtitle: "test",
+            description:
+              "aliquet non hendrerit ut, sollicitudin vitae nisl. Mauris lacinia, eros porttitor suscipit mollis, leo turpis consectetur ex, sit amet tristique risus est id ex. Duis et efficitur tortor. Cras et metus enim. Donec viverra urna nec semper pellentesque. Fusce eros nisl, scelerisque eu leo et, rutrum rutrum tellus. Aliquam id justo enim Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vehicula purus erat, sed viverra lectus molestie et. Duis diam ante"
+          }
+        ]
+      });
+      return TopicsActions.setTopics({
+        topics: [...response.map(t => new Topic(t)), newTopic] || []
+      });
+    }),
+    catchError((err, caught) => {
+      return caught;
+    })
+  );
 }

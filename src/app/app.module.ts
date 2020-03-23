@@ -15,6 +15,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { AngularFireMessagingModule } from "@angular/fire/messaging";
 import { AngularFireModule } from "@angular/fire";
 import { MessagingService } from "./shared/messaging.service";
+import { DeviceDetectorModule } from "ngx-device-detector";
 
 @NgModule({
   declarations: [AppComponent],
@@ -29,6 +30,7 @@ import { MessagingService } from "./shared/messaging.service";
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireMessagingModule,
     AppRoutingModule,
+    DeviceDetectorModule.forRoot(),
     // ServiceWorkerModule.register("main-sw.js", {
     //   enabled: environment.production
     // }),

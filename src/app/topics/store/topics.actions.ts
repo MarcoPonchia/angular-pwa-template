@@ -32,3 +32,6 @@ export const removeTopic = createAction(
   "[Topics] Remove Topic",
   props<{ topicId: string }>()
 );
+
+// TODO: remove fake fetch
+export const fakeFetchTopic = createAction("[Topics]  Fake Fetch Topic");

@@ -1,12 +1,16 @@
 import { Injectable } from "@angular/core";
 import { AngularFireMessaging } from "@angular/fire/messaging";
-import { BehaviorSubject } from "rxjs";
+import * as Actions from "../topics/store/topics.actions";
+import { Store } from "@ngrx/store";
 
-@Injectable()
+@Injectable({
+  providedIn: "root"
+})
 export class MessagingService {
-  currentMessage = new BehaviorSubject(null);
-
-  constructor(private angularFireMessaging: AngularFireMessaging) {
+  constructor(
+    private store: Store<any>,
+    private angularFireMessaging: AngularFireMessaging
+  ) {
     this.angularFireMessaging.messaging.subscribe(_messaging => {
       _messaging.onMessage = _messaging.onMessage.bind(_messaging);
       _messaging.onTokenRefresh = _messaging.onTokenRefresh.bind(_messaging);
@@ -27,9 +31,8 @@ export class MessagingService {
   receiveMessage() {
     this.angularFireMessaging.messages.subscribe(payload => {
       console.log("new message received. ", payload);
-      this.currentMessage.next(payload);
+      // this.currentMessage.next(payload);
+      this.store.dispatch(Actions.fakeFetchTopic());
     });
   }
-
-  sendMessage() {}
 }

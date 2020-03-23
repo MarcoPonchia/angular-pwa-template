@@ -48,5 +48,9 @@
       "type": "image/png"
     }
   ],
+  "permissions": [
+    "notifications",
+    "gcm"
+  ],
   "gmc_sender_id": "568704490419"
 }
