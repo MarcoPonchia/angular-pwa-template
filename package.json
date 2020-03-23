@@ -27,7 +27,6 @@
     "@ngrx/store": "^8.6.0",
     "@ngrx/store-devtools": "^8.6.0",
     "bootstrap": "^4.4.1",
-    "device-uuid": "^1.0.4",
     "firebase": "^7.6.0",
     "ngx-device-detector": "^1.4.1",
     "rxjs": "~6.4.0",
